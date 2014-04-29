@@ -25,6 +25,8 @@ public class Jumper extends Actor {
         setDirection(getDirection() + Location.HALF_RIGHT); 
     }
 
+    //jumps if the space 2 blocks away is valid
+    //else, turns
     public void jump(){
         Grid<Actor> gr = getGrid();
         if(gr == null)
@@ -38,6 +40,7 @@ public class Jumper extends Actor {
             turn(); 
     }
 
+    //Jumper jumps as long as the location 2 squares away is not a rock
     public boolean canJump(){
         Grid<Actor> gr = getGrid();
         if (gr == null)
